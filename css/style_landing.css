@@ -1,0 +1,21 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font: 16px "Roboto", sans-serif;
+  background: #7156f3; }
+
+* {
+  box-sizing: border-box; }
+
+  .main_block_product {
+    display: flex;
+    padding: 30px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .product_img {
+    max-width: 160px;
+  }
