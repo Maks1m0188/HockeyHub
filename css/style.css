@@ -2,8 +2,8 @@ html,
 body {
   margin: 0;
   padding: 0;
-  font: 16px "Roboto", sans-serif;
-  background: #7156f3; }
+  font-family: "Oswald", sans-serif;
+ }
 
 * {
   box-sizing: border-box; }
@@ -40,7 +40,7 @@ body {
     background-size: 30px;
     margin-bottom: 20px;
     padding: 0 15px 0 59px;
-    font: 16px "Roboto", sans-serif;
+    font: 14px "Roboto", sans-serif;
     color: #fff;
     transition: 0.3s; }
     .contact-form__input_name:focus {
@@ -55,7 +55,7 @@ body {
     background-size: 30px;
     margin-bottom: 20px;
     padding: 0 15px 0 59px;
-    font: 16px "Roboto", sans-serif;
+    font: 14px "Roboto", sans-serif;
     color: #fff;
     transition: 0.3s; }
     .contact-form__input_phone:focus {
@@ -74,7 +74,7 @@ body {
     background-size: 30px;
     margin-bottom: 20px;
     padding: 0 15px 0 59px;
-    font: 16px "Roboto", sans-serif;
+    font: 14px "Roboto", sans-serif;
     color: #757575;
     cursor: pointer; }
   .contact-form__button {
