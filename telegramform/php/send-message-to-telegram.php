@@ -29,7 +29,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST['name']) && !empty($_POST['name'])) {
         $txt .= "Имя пославшего: " . strip_tags(trim(urlencode($_POST['name']))) . "%0A";
     }
-    
+
+    // Характеристики
+    if (isset($_POST['model']) && !empty($_POST['model'])) {
+      $txt .= "Наименование: " . strip_tags(trim(urlencode($_POST['model']))) . "%0A";
+  }
+
+  // Характеристики
+  if (isset($_POST['state']) && !empty($_POST['state'])) {
+    $txt .= "Состояние: " . strip_tags(trim(urlencode($_POST['state']))) . "%0A";
+}
+
+// Характеристики
+if (isset($_POST['age-size']) && !empty($_POST['age-size'])) {
+  $txt .= "Возраст: " . strip_tags(trim(urlencode($_POST['age-size']))) . "%0A";
+}
+
+// Характеристики
+if (isset($_POST['char-stick-bend']) && !empty($_POST['char-stick-bend'])) {
+  $txt .= "Сторона загиба крюка: " . strip_tags(trim(urlencode($_POST['char-stick-bend']))) . "%0A";
+}
+
+// Характеристики
+if (isset($_POST['char-stick-n']) && !empty($_POST['char-stick-n'])) {
+  $txt .= "Номер загиба крюка: " . strip_tags(trim(urlencode($_POST['char-stick-n']))) . "%0A";
+}
+
+// Характеристики
+if (isset($_POST['stick-flex']) && !empty($_POST['stick-flex'])) {
+  $txt .= "Flex: " . strip_tags(trim(urlencode($_POST['stick-flex']))) . "%0A";
+}
+
     // Номер телефона
     if (isset($_POST['phone']) && !empty($_POST['phone'])) {
         $txt .= "Телефон: " . strip_tags(trim(urlencode($_POST['phone']))) . "%0A";
