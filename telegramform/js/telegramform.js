@@ -25,7 +25,7 @@
         $(".preloader").removeClass("preloader_active");
 
         // Посмотреть на статус ответа, если ошибка
-        console.log(res);
+        // console.log(res);
         let respond = $.parseJSON(res);
 
         if (respond === "SUCCESS") {

@@ -19,14 +19,14 @@ body {
   width: 100%;
   max-width: 460px;
   padding: 60px;
-  background: #1c1e21;
+  background: #006deb;
   border-radius: 10px;
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3); }
   .contact-form__title {
     text-transform: uppercase;
     line-height: 1.5;
     text-align: center;
-    color: #fff1c6;
+    color: #fff;
     font-size: 18px;
     margin: 0 0 30px; }
   .contact-form__message {
@@ -36,13 +36,14 @@ body {
     border: 1px solid #282a2e;
     border-radius: 5px;
     width: 100%;
-    background: url("/img/user.svg") center left 15px no-repeat, #1c1e21;
+    background: center left 15px no-repeat, #fff;
     background-size: 30px;
     margin-bottom: 20px;
-    padding: 0 15px 0 59px;
+    padding: 0 15px 0 15px;
     font: 14px "Roboto", sans-serif;
-    color: #fff;
+    color: #000000;
     transition: 0.3s; }
+
     .contact-form__input_name:focus {
       transition: 0.3s;
       border: 1px solid rgba(255, 241, 198, 0.2); }
@@ -51,12 +52,12 @@ body {
     border: 1px solid #282a2e;
     border-radius: 5px;
     width: 100%;
-    background: url("/img/tel.svg") center left 15px no-repeat, #1c1e21;
+    background: center left 15px no-repeat, #ffffff;
     background-size: 30px;
     margin-bottom: 20px;
-    padding: 0 15px 0 59px;
+    padding: 0 15px 0 15px;
     font: 14px "Roboto", sans-serif;
-    color: #fff;
+    color: #000;
     transition: 0.3s; }
     .contact-form__input_phone:focus {
       transition: 0.3s;
@@ -70,13 +71,14 @@ body {
     border: 1px solid #282a2e;
     border-radius: 5px;
     width: 100%;
-    background: url("/img/file.svg") center left 15px no-repeat, #1c1e21;
+    background: url("/img/file.svg") center left 15px no-repeat, #fff;
     background-size: 30px;
     margin-bottom: 20px;
     padding: 0 15px 0 59px;
     font: 14px "Roboto", sans-serif;
     color: #757575;
     cursor: pointer; }
+
   .contact-form__button {
     background: #fff1c6;
     height: 50px;
@@ -127,6 +129,7 @@ body {
     position: absolute;
     background: #5f646c;
     animation: preloader_after 1.8s infinite cubic-bezier(0.4, 0, 0.2, 1); }
+
 
 @keyframes preloader_before {
   0% {

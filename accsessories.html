@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Размещение объявления</title>
+  <title>HockeyHub.bel</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="./css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" type="text/css">
@@ -16,17 +16,23 @@
       <div class="preloader"></div>
       <p class="contact-form__message"></p>
 
+      <!-- Поле с наименованием -->
+      <div class="contact-form__input-wrapper contact-form__input-wrapper_name">
+        <input name="name" type="text" class="contact-form__input contact-form__input_name"
+               placeholder="Наименование и бренд">
+      </div>
+
       <!-- Поле с именем -->
       <div class="contact-form__input-wrapper contact-form__input-wrapper_name">
         <input name="name" type="text" class="contact-form__input contact-form__input_name"
-               placeholder="Что продаёте?">
+               placeholder="Ваше имя">
       </div>
 
 
       <!-- Поле с телефоном -->
       <div class="contact-form__input-wrapper contact-form__input-wrapper_phone">
         <input name="phone" type="tel" class="contact-form__input contact-form__input_phone"
-               placeholder="Введите ваш телефон">
+               placeholder="Ваш номер телефона">
       </div>
 
       <!-- Поле с выбором файла -->
@@ -34,7 +40,7 @@
         <input type="file" name="files[]" id="contact-form__input_file"
                class="contact-form__input contact-form__input_file" multiple>
         <label for="contact-form__input_file" class="contact-form__file-button">
-          <span class="contact-form__file-text">Выберите файл</span>
+          <span class="contact-form__file-text">Загрузить фото</span>
         </label>
       </div>
 
