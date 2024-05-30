@@ -24,15 +24,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     // Если не пустые, то валидируем эти поля и сохраняем и добавляем в тело сообщения. Минимально для теста так:
     $txt = "";
-    
-    // Имя
-    if (isset($_POST['name']) && !empty($_POST['name'])) {
-        $txt .= "Имя пославшего: " . strip_tags(trim(urlencode($_POST['name']))) . "%0A";
-    }
 
-    // Характеристики
+        // Вид товара
+        if (isset($_POST['theme']) && !empty($_POST['theme'])) {
+          $txt .= "Товар: " . strip_tags(urlencode($_POST['theme']));
+      }
+
+    // Бренд и модель
     if (isset($_POST['model']) && !empty($_POST['model'])) {
-      $txt .= "Наименование: " . strip_tags(trim(urlencode($_POST['model']))) . "%0A";
+      $txt .= "Бренд и модель: " . strip_tags(trim(urlencode($_POST['model']))) . "%0A";
   }
 
   // Характеристики
@@ -60,14 +60,14 @@ if (isset($_POST['stick-flex']) && !empty($_POST['stick-flex'])) {
   $txt .= "Flex: " . strip_tags(trim(urlencode($_POST['stick-flex']))) . "%0A";
 }
 
+    // Имя
+    if (isset($_POST['name']) && !empty($_POST['name'])) {
+      $txt .= "Имя продавца: " . strip_tags(trim(urlencode($_POST['name']))) . "%0A";
+  }
+
     // Номер телефона
     if (isset($_POST['phone']) && !empty($_POST['phone'])) {
-        $txt .= "Телефон: " . strip_tags(trim(urlencode($_POST['phone']))) . "%0A";
-    }
-    
-    // Не забываем про тему сообщения
-    if (isset($_POST['theme']) && !empty($_POST['theme'])) {
-        $txt .= "Тема: " . strip_tags(urlencode($_POST['theme']));
+        $txt .= "Номер телефона: " . strip_tags(trim(urlencode($_POST['phone']))) . "%0A";
     }
 
     $textSendStatus = @file_get_contents('https://api.telegram.org/bot'. TOKEN .'/sendMessage?chat_id=' . CHATID . '&parse_mode=html&text=' . $txt); 
