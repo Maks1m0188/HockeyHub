@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Вид товара
         if (isset($_POST['theme']) && !empty($_POST['theme'])) {
-          $txt .= "Товар: " . strip_tags(urlencode($_POST['theme']));
+          $txt .= "Товар: " . strip_tags(trim(urlencode($_POST['theme']))) . "%0A";
       }
 
     // Бренд и модель
