@@ -7,11 +7,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="./css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
+  <div class="popup">
+    <span class="popup_success_img"></span>
+    <p class="popup_text">Ваша заявка на размещение успешно отправлена! После успешной модерации объявление будет опубликовано в ближайшее время.</p>
+    <a href="/index.html" class="popup_button">На главную страницу</a>
+  </div>
   <div class="form-wrapper">
     <form id="form-contact" method="POST" class="contact-form" autocomplete="off" enctype="multipart/form-data">
+      <p class="contact-form__product">Сумка</p>
       <p class="contact-form__title">Заполните данные для размещения объявления</p>
       <div class="preloader"></div>
       <p class="contact-form__message"></p>
@@ -52,7 +60,7 @@
 
       <!--Поле с темой в письме-->
       <input name="theme" type="hidden" class="contact-form__input contact-form__input_theme"
-             value="заявка на размещение с HockeyHub">
+             value="Сумка">
 
       <!--Кнопка отправки формы-->
       <button type="submit" class="contact-form__button">Отправить</button>

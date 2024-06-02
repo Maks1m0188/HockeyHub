@@ -28,12 +28,21 @@ body {
   border-radius: 10px;
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3); }
   .contact-form__title {
-    text-transform: uppercase;
     line-height: 1.5;
     text-align: center;
     color: #fff;
-    font-size: 18px;
+    font-size: 16px;
     margin: 0 0 30px; }
+
+  .contact-form__product {
+    text-decoration: underline;
+    line-height: 1.5;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    margin-top: 0;
+  }
+
   .contact-form__message {
     text-align: center; }
   .contact-form__input_name {

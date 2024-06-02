@@ -30,7 +30,7 @@ a {
     z-index: 1;
     background-color: white;
   }
-
+  
   .product_img {
     display: flex;
     width: 300px;
@@ -63,7 +63,40 @@ a {
     transition: 0.2s;
   }
 
+  .footer {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    background-color: black;
+  }
 
+  .footer_social {
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer_link_inst_img {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: url(/img/inst_img.svg) no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .footer_link_tg_img {
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+    background: url(/img/tg_img.svg) no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .footer_text {
+    margin-top: 0;
+    text-align: center;
+    color: white;
+  }
 
  @media (max-width: 380px) {
     .product_img {
