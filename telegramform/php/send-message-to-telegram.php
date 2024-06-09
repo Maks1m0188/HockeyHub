@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $msgs = [];
   
   // Проверяем не пусты ли поля с именем и телефоном
-  if (!empty($_POST['name']) && !empty($_POST['phone'])) {
+  if (!empty($_POST['price']) && !empty($_POST['phone']) && !empty($_POST['model']) && !empty($_POST['state']) && !empty($_POST['age-size'])) {
     
     // Если не пустые, то валидируем эти поля и сохраняем и добавляем в тело сообщения. Минимально для теста так:
     $txt = "";
@@ -35,40 +35,50 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $txt .= "Бренд и модель: " . strip_tags(trim(urlencode($_POST['model']))) . "%0A";
   }
 
+    // Характеристики
+    if (isset($_POST['state']) && !empty($_POST['state'])) {
+      $txt .= "Состояние: " . strip_tags(trim(urlencode($_POST['state']))) . "%0A";
+  }
+
   // Характеристики
-  if (isset($_POST['state']) && !empty($_POST['state'])) {
-    $txt .= "Состояние: " . strip_tags(trim(urlencode($_POST['state']))) . "%0A";
-}
+  if (isset($_POST['age-size']) && !empty($_POST['age-size'])) {
+    $txt .= "Возраст: " . strip_tags(trim(urlencode($_POST['age-size']))) . "%0A";
+  }
 
-// Характеристики
-if (isset($_POST['age-size']) && !empty($_POST['age-size'])) {
-  $txt .= "Возраст: " . strip_tags(trim(urlencode($_POST['age-size']))) . "%0A";
-}
+  // Характеристики
+  if (isset($_POST['char-stick-bend']) && !empty($_POST['char-stick-bend'])) {
+    $txt .= "Сторона загиба крюка: " . strip_tags(trim(urlencode($_POST['char-stick-bend']))) . "%0A";
+  }
 
-// Характеристики
-if (isset($_POST['char-stick-bend']) && !empty($_POST['char-stick-bend'])) {
-  $txt .= "Сторона загиба крюка: " . strip_tags(trim(urlencode($_POST['char-stick-bend']))) . "%0A";
-}
+  // Характеристики
+  if (isset($_POST['char-stick-n']) && !empty($_POST['char-stick-n'])) {
+    $txt .= "Номер загиба крюка: " . strip_tags(trim(urlencode($_POST['char-stick-n']))) . "%0A";
+  }
 
-// Характеристики
-if (isset($_POST['char-stick-n']) && !empty($_POST['char-stick-n'])) {
-  $txt .= "Номер загиба крюка: " . strip_tags(trim(urlencode($_POST['char-stick-n']))) . "%0A";
-}
+  // Характеристики
+  if (isset($_POST['stick-flex']) && !empty($_POST['stick-flex'])) {
+    $txt .= "Flex: " . strip_tags(trim(urlencode($_POST['stick-flex']))) . "%0A";
+  }
 
-// Характеристики
-if (isset($_POST['stick-flex']) && !empty($_POST['stick-flex'])) {
-  $txt .= "Flex: " . strip_tags(trim(urlencode($_POST['stick-flex']))) . "%0A";
-}
+      // Цена
+      if (isset($_POST['price']) && !empty($_POST['price'])) {
+        $txt .= "Цена: " . strip_tags(trim(urlencode($_POST['price']))) . "%0A";
+  }
 
-    // Имя
-    if (isset($_POST['name']) && !empty($_POST['name'])) {
-      $txt .= "Имя продавца: " . strip_tags(trim(urlencode($_POST['name']))) . "%0A";
+    // Город
+    if (isset($_POST['location']) && !empty($_POST['location'])) {
+      $txt .= "Город: " . strip_tags(trim(urlencode($_POST['location']))) . "%0A";
   }
 
     // Номер телефона
     if (isset($_POST['phone']) && !empty($_POST['phone'])) {
         $txt .= "Номер телефона: " . strip_tags(trim(urlencode($_POST['phone']))) . "%0A";
-    }
+  }
+
+    // Описание
+  if (isset($_POST['description']) && !empty($_POST['description'])) {
+    $txt .= "Описание: " . strip_tags(trim(urlencode($_POST['description']))) . "%0A";
+  }
 
     $textSendStatus = @file_get_contents('https://api.telegram.org/bot'. TOKEN .'/sendMessage?chat_id=' . CHATID . '&parse_mode=html&text=' . $txt); 
 

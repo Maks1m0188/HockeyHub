@@ -5,7 +5,7 @@
     // Сообщения формы
     let successSendText = "Сообщение успешно отправлено";
     let errorSendText = "Сообщение не отправлено. Попробуйте еще раз!";
-    let requiredFieldsText = "Заполните все поля!";
+    let requiredFieldsText = "Заполните все поля с * !";
     let popup = document.querySelector('.popup');
     let formWrap = document.querySelector('.form-wrapper');
 

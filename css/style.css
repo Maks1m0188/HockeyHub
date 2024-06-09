@@ -24,7 +24,8 @@ body {
   width: 100%;
   max-width: 460px;
   padding: 60px;
-  background: #006deb;
+  background: url(/img/bg_story.jpg) no-repeat;
+  background-size: cover;
   border-radius: 10px;
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3); }
   .contact-form__title {
@@ -32,10 +33,14 @@ body {
     text-align: center;
     color: #fff;
     font-size: 16px;
-    margin: 0 0 30px; }
+    margin: 30px 0 30px; }
 
   .contact-form__product {
-    text-decoration: underline;
+    margin: 0 auto;
+    width: 60%;
+    text-transform: uppercase;
+    border: #fff solid 2px;
+    border-radius: 10px;
     line-height: 1.5;
     text-align: center;
     color: #fff;
