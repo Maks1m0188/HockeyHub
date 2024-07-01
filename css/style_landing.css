@@ -103,6 +103,14 @@ a {
     color: white;
   }
 
+  .header_bottom-text {
+    margin: 5px 5px;
+    text-align: center;
+    font-size: 15px;
+    text-shadow: #FC0 1px 0 10px;
+    color: #fff;
+  }
+
   .footer {
     display: flex;
     align-items: center;

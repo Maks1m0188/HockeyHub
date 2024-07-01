@@ -19,10 +19,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $textSendStatus = '';
   $msgs = [];
   
-  // Проверяем не пусты ли поля с именем и телефоном
-  if (!empty($_POST['price']) && !empty($_POST['phone']) && !empty($_POST['model']) && !empty($_POST['state']) && !empty($_POST['age-size'])) {
+  // Проверяем не пусты ли поля
+  if (!empty($_POST['type']) && !empty($_POST['brand']) && !empty($_POST['price']) && !empty($_POST['phone']) && !empty($_POST['model']) && !empty($_POST['state']) && !empty($_POST['age-size'])) {
     
-    // Если не пустые, то валидируем эти поля и сохраняем и добавляем в тело сообщения. Минимально для теста так:
+    // Если не пустые, то валидируем эти поля и сохраняем и добавляем в тело сообщения.
     $txt = "";
 
         // Вид товара
@@ -30,9 +30,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           $txt .= "Товар: " . strip_tags(trim(urlencode($_POST['theme']))) . "%0A";
       }
 
-    // Бренд и модель
+      // Вид экипировки
+      if (isset($_POST['type']) && !empty($_POST['type'])) {
+        $txt .= "Вид экипировки: " . strip_tags(trim(urlencode($_POST['type']))) . "%0A";
+    }
+
+    // Вид экипировки
+    if (isset($_POST['brand']) && !empty($_POST['brand'])) {
+      $txt .= "Бренд: " . strip_tags(trim(urlencode($_POST['brand']))) . "%0A";
+  }
+
+    // Модель
     if (isset($_POST['model']) && !empty($_POST['model'])) {
-      $txt .= "Бренд и модель: " . strip_tags(trim(urlencode($_POST['model']))) . "%0A";
+      $txt .= "Модель: " . strip_tags(trim(urlencode($_POST['model']))) . "%0A";
   }
 
     // Характеристики
